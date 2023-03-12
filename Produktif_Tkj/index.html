@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <!-- My style -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- My font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+    <!-- CSS -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(225, 255, 225);
+        min-height: auto;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* navbar start */
+      .navbar-sect {
+        display: flex;
+        align-items: center;
+        padding: 1.4rem 7%;
+        justify-content: space-around;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background-color: rgb(36, 65, 36);
+      }
+
+      .brand h1 {
+        display: flex;
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(220, 215, 210);
+      }
+
+      .brand h1 span {
+        color: rgb(92, 206, 90);
+      }
+
+      /* .brand span {
+        color: rgb(6, 79, 162);
+      } */
+
+      .navbar-sect .option a {
+        display: flex;
+        overflow: hidden;
+      }
+
+      .navbar-sect .option a {
+        color: rgb(246, 255, 242);
+        display: inline-block;
+        font-size: 1rem;
+        margin: 0 2rem;
+        font-weight: 600;
+      }
+
+      .navbar-sect .option a:hover {
+        color: rgb(92, 206, 90);
+      }
+
+      .navbar-sect .option a::after {
+        content: "";
+        display: block;
+        padding: 0.2rem;
+        border-bottom: 2px solid rgb(48, 109, 47);
+        transform: translate(-150%);
+        transition: 0.7s ease;
+      }
+
+      .navbar-sect .option a:hover::after {
+        transform: translate(150%);
+      }
+      /* navbar end */
+
+      /* Carousel start */
+      .carousel {
+        margin-top: 80px;
+      }
+
+      .carousel-left:hover {
+        background-color: rgba(191, 191, 191, 0.286);
+        height: 50px;
+        width: 30px;
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+
+      .carousel-right:hover {
+        background-color: rgba(191, 191, 191, 0.286);
+        height: 50px;
+        width: 30px;
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+
+      .carousel-item {
+        height: 715px;
+      }
+
+      .carousel-item img {
+        margin-top: -110px;
+        filter: brightness(50%);
+        background-size: cover;
+      }
+
+      .carousel-item .display-5 {
+        margin-top: -400px;
+      }
+      .carousel-item h1 span {
+        font-weight: bold;
+        color: rgb(92, 206, 90);
+      }
+
+      .carousel-item .btn {
+        border-radius: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 30px;
+        font-size: 15px;
+        background-color: rgb(76, 160, 75);
+        color: rgb(27, 50, 27);
+        font-weight: bold;
+      }
+
+      .carousel-item .btn:hover {
+        background-color: rgb(244, 244, 244);
+        color: rgb(27, 50, 27);
+      }
+
+      .carousel-item .btn::after {
+        transition: all 20s ease;
+      }
+
+      .carousel-item p {
+        font-size: 25px;
+      }
+
+      .carousel-item hr {
+        border-color: rgb(92, 206, 90);
+        width: 70px;
+        border-width: 3px;
+        margin-left: 490px;
+      }
+      /* Carousel end */
+
+      /* Home start */
+      .activity-judul h2 {
+        margin-left: 35%;
+        margin-right: 35%;
+        padding: 10vh;
+        text-align: center;
+        color: rgb(48, 109, 47);
+      }
+
+      .activity-isi,
+      .activity-right {
+        display: flex;
+      }
+
+      .activity-isi ul li,
+      .activity-right ul li {
+        margin-top: 40px;
+        color: rgb(48, 109, 47);
+      }
+
+      .activity-isi img,
+      .activity-right img {
+        width: 450px;
+        height: 320px;
+        border-radius: 2px;
+        margin-left: 100px;
+        transition: all 1.3s ease;
+      }
+
+      .activity-isi img:hover,
+      .activity-right img:hover {
+        transform: scale(1.1);
+      }
+
+      .activity-isi hr,
+      .activity-right hr {
+        width: 350px;
+      }
+
+      .hr-1,
+      .hr-2,
+      .hr-3 {
+        margin-left: 150px;
+        margin-right: 120px;
+        margin-top: 200px;
+        margin-bottom: 150px;
+        color: rgba(27, 50, 27, 0.755);
+      }
+
+      .hr-4 {
+        margin-top: 40vh;
+        border: hidden;
+      }
+
+      .activity-isi {
+        margin-left: 100px;
+      }
+
+      .activity-right {
+        margin-left: 170px;
+        width: 170vh;
+      }
+
+      .activity-right img {
+        margin-left: 200px;
+      }
+
+      /* Home end */
+
+      /* parlax start */
+      .pralax-sect {
+        background-image: url(../Produktif_Tkj/img/kelas-TKJ.png);
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 55vh;
+        border-top: 3px solid rgba(27, 50, 27, 0.755);
+        border-bottom: 3px solid rgba(27, 50, 27, 0.755);
+      }
+
+      .pralax-sect p {
+        color: white;
+        font-weight: bold;
+        font-size: 40px;
+        margin-top: 130px;
+        margin-bottom: 180px;
+      }
+      /* parlax end */
+
+      .rekaman {
+        background-color: rgb(48, 109, 47);
+        border-bottom: 2px solid rgba(27, 50, 27, 0.755);
+      }
+
+      .rekaman h2 {
+        color: white;
+      }
+
+      .onYt {
+        margin-top: 60px;
+        margin-bottom: 80px;
+      }
+
+      /* footer */
+      .footer {
+        padding: 40px;
+        background-color: rgb(48, 109, 47);
+        color: white;
+      }
+
+      /* Media */
+      @media screen and (max-width: 1500px) {
+        .navbar-sect a {
+          display: hidden;
+        }
+
+        .carousel-item {
+          height: 700px;
+        }
+
+        .carousel-item img {
+          margin-top: -10px;
+          filter: brightness(50%);
+          background-size: cover;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .carousel-item {
+          height: 260px;
+        }
+
+        .carousel-item img {
+          margin-top: -10px;
+          filter: brightness(50%);
+          background-size: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar-sect">
+      <div class="brand">
+        <a href="">
+          <h1>S<span>F</span></h1>
+        </a>
+      </div>
+      <div class="option">
+        <a href="#">BERANDA</a>
+        <a href="/Produktif_Tkj/potofolio.html">PORTOFOLIO</a>
+        <a href="/Produktif_Tkj/Identitas diri.html">IDENTITAS DIRI</a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Home Start -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide carousel carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/Produktif_Tkj/img/IP ADDRES.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-5">
+              BELAJAR <br />
+              <span class="font-weight-bold">MENENTUKAN IP ADDRESS</span>
+            </h1>
+            <hr class="my-4" />
+            <p>
+              Kami belajar bagaimana cara menentukan IP Address di setiap device
+            </p>
+            <a
+              class="btn btn-lg font-weight-bold"
+              href="#judul-kegiatan"
+              target="_parent"
+              role="button"
+              >SELENGKAPNYA</a
+            >
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/Produktif_Tkj/img/Hotpot (2).png"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-5">
+              KEGIATAN <br />
+              <span class="font-weight-bold">KERJA BAKTI RUTIN</span>
+            </h1>
+            <hr class="my-4" />
+            <p>Melakukan kerja bakti rutin setiap seminggu sekali</p>
+            <a class="btn btn-lg font-weight-bold" href="#hr-1" role="button"
+              >SELENGKAPNYA</a
+            >
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://images.unsplash.com/photo-1591238372338-22d30c883a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-5">
+              PRAKTEK <br />
+              <span class="font-weight-bold">PERAKITAN PC</span>
+            </h1>
+            <hr class="my-4" />
+            <p>Praktek merakit PC yang dilakukan secara berkelompok</p>
+            <a class="btn btn-lg font-weight-bold" href="#hr-2" role="button"
+              >SELENGKAPNYA</a
+            >
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/Produktif_Tkj/img/Hotpot.png"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-5">
+              CONTOH <br />
+              <span class="font-weight-bold">PENERAPAN K3LH</span>
+            </h1>
+            <hr class="my-4" />
+            <p>Edukasi tentang pentingnya K3LH ala TJKT</p>
+            <a class="btn btn-lg font-weight-bold" href="#hr-3" role="button"
+              >SELENGKAPNYA</a
+            >
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span
+          class="carousel-control-prev-icon carousel-left"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span
+          class="carousel-control-next-icon carousel-right"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div
+      id="judul-kegiatan"
+      class="activity-judul my-5 mx-4"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      data-aos-delay="80"
+    >
+      <h2>Kegiatan di Jurusan <span>Tjkt</span></h2>
+    </div>
+    <div
+      id="IpAddress"
+      class="activity-isi"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-delay="100"
+    >
+      <img src="/Produktif_Tkj/img/IP ADDRES.jpg" alt="" />
+
+      <ul class="mx-5">
+        <li>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <h3>Menghitung IP address</h3>
+          </div>
+          <hr />
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <span>
+              Disi kami belajar menentukan IP Address di setiap device <br />
+              tidak hanya itu kami juga menghitung IP Address tersebut kira kira
+              bisa digunakan <br />
+              atau tidak jika perhitungan nya salah maka IP Address tersebut
+              tidak akan berfungsi.
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="0"
+    >
+      <hr id="hr-1" class="hr-1" />
+    </div>
+
+    <div
+      id="kerjabakti"
+      class="activity-right mt-5"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      <ul>
+        <li>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <h3>Kerja Bakti Rutin</h3>
+            <hr />
+          </div>
+          <div
+            class=""
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <span>
+              Kerja bakti rutin yang dilakukan murid TKJ <br />
+              yang dilaksanakan setiap hari Jumat dalam 3 minggu sekali karena
+              bergilir<br />
+              Dimulai dari membersihkan tangga, lantai depan kelas, Lab hingga
+              ruang bengkel sendiri dengan dibagi 3 dari jumlah 36 siswa.
+            </span>
+          </div>
+        </li>
+      </ul>
+
+      <img src="/Produktif_Tkj/img/Hotpot (2).png" alt="" />
+    </div>
+
+    <div
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="0"
+    >
+      <hr id="hr-2" class="hr-2" />
+    </div>
+
+    <div
+      id="pc"
+      class="activity-isi mt-5"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-delay="100"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1591238372338-22d30c883a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+        alt=""
+      />
+
+      <ul class="mx-5">
+        <li>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <h3>Merakit PC</h3>
+          </div>
+          <hr />
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <span>
+              Praktek pertama kali dilaksanakan yaitu merakit PC<br />
+              Materi kelas X yang dilakukan secara berkelompok untuk membongkar
+              pasang Pc <br />
+              Praktek ini termasuk praktek yang seru dan juga menantang karena
+              jika salah pasang <br />
+              komponen PC maka PC tersebut tidak akan menyala
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="0"
+    >
+      <hr id="hr-3" class="hr-3" />
+    </div>
+
+    <div
+      class="activity-right mt-5"
+      id="k3lh"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+      data-aos-delay="100"
+    >
+      <ul>
+        <li>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <h3>Penerapan K3LH</h3>
+          </div>
+          <hr />
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <span>
+              Membuat edukasi mengenai pentingnya merapkan K3LH<br />
+              Contohnya Penerapan K3LH khusus TKJ diantaranya mengenakan <br />
+              sarung tangan lateks, masker, sepatu safety dan kaca mata meskipun
+              dilihat sepele namun sangat penting karena kita tidak tau kapan
+              akan <br />
+              ada bahaya.
+            </span>
+          </div>
+        </li>
+      </ul>
+
+      <img src="/Produktif_Tkj/img/Hotpot.png" alt="" />
+    </div>
+    <!-- Home end -->
+
+    <hr class="hr-4" />
+
+    <!-- Pralax start -->
+    <div class="pralax-sect text-center mt-lg-5 py-5">
+      <p>TEKNIK JARINGAN KOMPUTER</p>
+    </div>
+    <!-- Pralax end -->
+
+    <!-- Video Kegiatan start -->
+    <div class="rekaman swiper-slide text-center py-5 p-5">
+      <div data-aos="fade-down" data-aos-delay="50" data-aos-duration="900">
+        <h2>Rekaman Praktek</h2>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+        <iframe
+          class="onYt"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/gFaqBPWfEqU"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Video Kegiatan end -->
+
+    <!-- Portofolio start -->
+    <!-- Portofolio end -->
+
+    <!-- Footer Section -->
+    <footer class="footer text-center">
+      <div class="container">
+        <p>
+          Website tugas Produktif Tkj dengan Biodata diri saya <br />
+          &copy; 2023 By : Sofyan Ardianto <br />
+          All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riwayat Hidup</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+
+* {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        font-family: Poppins;
+      }
+
+      body {
+        background-color: rgb(225, 255, 225);
+        min-height: auto;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* navbar start */
+      .navbar-sect {
+        display: flex;
+        align-items: center;
+        padding: 1.4rem 7%;
+        justify-content: space-around;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background-color: rgb(36, 65, 36);
+      }
+
+      .brand h1 {
+        display: flex;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: rgb(220, 215, 210);
+        font: optional italic;
+      }
+
+      /* .brand span {
+        color: rgb(6, 79, 162);
+      } */
+
+      .navbar-sect .option a {
+        display: flex;
+        overflow: hidden;
+      }
+
+      .navbar-sect .option a {
+        color: rgb(246, 255, 242);
+        display: inline-block;
+        font-size: 1rem;
+        margin: 0 2rem;
+        font-weight: 600;
+      }
+
+      .navbar-sect .option a:hover {
+        color: rgb(92, 206, 90);
+      }
+
+      .navbar-sect .option a::after {
+        content: "";
+        display: block;
+        padding: 0.2rem;
+        border-bottom: 2px solid rgb(48, 109, 47);
+        transform: translate(-150%);
+        transition: 0.7s ease;
+      }
+
+      .navbar-sect .option a:hover::after {
+        transform: translate(150%);
+      }
+      /* navbar end */
+
+      .hero-sect {
+        margin-top: 85px;
+      }
+
+      .hero-sect tr td {
+        color: rgb(48, 109, 47);
+      }
+
+      .hero-sect h1 {
+        color: rgb(48, 109, 47);
+      }
+
+      .hero-sect img {
+        margin-top: -20px;
+        background-color:  rgb(48, 109, 47);
+        /* border: 3px solid rgba(27, 50, 27, 0.755); */
+      }
+
+         /* footer */
+         .footer {
+        padding: 40px;
+        background-color: rgb(48, 109, 47);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Navbar start -->
+    <nav class="navbar-sect">
+      <div class="brand">
+        <a href="/Produktif_Tkj/index.html">
+          <h1>PRODUKTIF <span>TJKT</span></h1>
+        </a>
+      </div>
+      <div class="option">
+        <a href="/Produktif_Tkj/index.html">BERANDA</a>
+        <a href="/Produktif_Tkj/potofolio.html">PORTOFOLIO</a>
+        <a href="#">IDENTITAS DIRI</a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- hero start -->
+    <div class="hero-sect container mt-2 py-5" >
+      <div style="font-family: 'Poppins', sans-serif;" class="row py-5 bg-dangr" width="500" >
+        <div data-aos="fade-down"  data-aos-delay="100"
+        data-aos-duration="1000" class="text-center">
+          <h1 style="font-size: 3rem; padding-bottom: 10px;">Data Pribadi</h1>
+        </div>
+          <hr data-aos="zoom-in" data-aos-delay="200"
+          data-aos-duration="1000">
+        
+          <div class="col" style="font-size: 20px;">
+            <div  data-aos="fade-right" data-aos-delay="100"
+            data-aos-duration="1000">
+          <table class=" mt-4 text-1 " align="center" cellpading="5" align="center" width=500" >
+            <tr >
+                <td>Nama</td> 
+                <td>: Sofyan Ardianto</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td class="col-6">: Jln Tipar cakung RT <span class="bg-d m-2 p-1"> 005/04 Jakarta Utara</span></td>
+            </tr>
+            <tr>
+                <td>Tempat, tanggal lahir</td>
+                <td>: Kudus, 1 Juni 2006</td>
+            </tr>
+            <tr>
+                <td>Jenis kelamin</td>
+                <td>: Laki-laki</td>
+            </tr>
+            <tr>
+                <td>Sekolah Asal</td>
+                <td>: SMKN 4 Jakarta Utara</td>
+            </tr>
+          </table>
+        </div>
+      <!-- hero end -->
+          <div class="medsos">
+          <table class="mt-5" align="center" align="center" width="500">
+            <tr>
+              <td class="col" data-aos="fade-right" data-aos-delay="600"
+              data-aos-duration="1000">Sosial Media Saya</td>
+            </tr>
+          </table>
+          </div>
+          <table class="mt-2" align="center" align="center" width="500">
+            <tr>
+            <td>
+              <div data-aos="zoom-in" data-aos-delay="1000"
+              data-aos-duration="4000"><a href="https://www.facebook.com/MhmdAnto" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-facebook" style="cursor: pointer;"></i></a> 
+              <span class="m-3" style="font-size: 15px;">Facebook</span></div>
+            </td>
+            <td>
+              <div data-aos="zoom-in" data-aos-delay="1600"
+              data-aos-duration="4000" ><a href="https://www.facebook.com/MhmdAnto" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-telegram" style="cursor: pointer;"></i></a> 
+              <span class="m-3" style="font-size: 15px;">Telegram</span></div>
+            </td>
+            </tr>
+            <tr>
+              <td>
+              <div data-aos="zoom-in" data-aos-delay="1200"
+              data-aos-duration="4000"><a href="https://instagram.com/_sofnd1?igshid=ZDdkNTZiNTM=" target="_blank" style="text-decoration: none; color: rgb(144, 11, 68);"><i class="fa-brands fa-instagram"  style="cursor: pointer;"></i></a> 
+              <span class="m-3" style="font-size: 15px; ">Instagram</span></div>
+            </td>
+            <td>
+              <div data-aos="zoom-in" data-aos-delay="1800"
+              data-aos-duration="4000"><a style="text-decoration: none; color: rgb(0, 100, 214);"><i class="fa-solid fa-envelope"></i></a> 
+              <span class="m-3" style="font-size: 15px;">sfyn.ardnt1@gmail.com</span></div>
+            </td>
+            </tr>
+            <tr>
+              <td>
+              <div data-aos="zoom-in" data-aos-delay="1400"
+              data-aos-duration="4000"><a href="https://wa.me/qr/3L7AAFBJFILBB1" target="_blank" style="text-decoration: none; color: green;"><i class="fa-brands fa-whatsapp"  style="cursor: pointer;"></i></a> 
+              <span class="m-3" style="font-size: 15px;" >Whatsapp</span></div>
+            </td>
+            <td>
+              <div data-aos="zoom-in" data-aos-delay="2000"
+              data-aos-duration="4000"><a href="https://twitter.com/SfynArdnt" target="_blank" style="text-decoration: none;"><i class="fa-brands fa-twitter"  style="cursor: pointer;"></i></a> 
+              <span class="m-3" style="font-size: 15px;" >Twitter</span></div>
+            </td>
+            </tr>
+          </table>
+          </div>
+          <div class="col-5 m-3 px-3 py-3" data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0">
+            <img class="img-fluid flex-shrink-0 rounded-circle" src="/Produktif_Tkj/img/w.png" width="250px" style="width: 380px; height: 360px;">
+          </div>
+        </div>
+          </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <footer class="footer text-center">
+      <div class="container">
+        <p>
+          Website tugas Produktif Tkj dengan Biodata diri saya <br />
+          &copy; 2023 By : Sofyan Ardianto <br />
+          All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
